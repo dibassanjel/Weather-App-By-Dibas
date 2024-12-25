@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Dibas's Weather Sphere</title>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="logo.png" alt="Logo" class="logo">
+      Dibas's Weather Sphere
+    </div>
+    <ul class="navbar-right">
+      <li><a href="#" id="home">Home</a></li>
+      <li><a href="#" id="search-weather">Search Weather</a></li>
+      <li><a href="#" id="about">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="weather-widget">
+    <div class="header">
+      <div class="location">
+        <span class="location-icon">📍</span>
+        <span class="country" id="country">Weather Search By Dibas</span>
+        <span class="search-icon">🔍</span>
+      </div>
+    </div>
+    <div class="search-section">
+      <input type="text" id="city" placeholder="Enter city name" />
+      <button id="search">Show Info</button>
+    </div>
+    <div id="result" class="weather-info">
+      <div class="weather-icon">☁️</div>
+      <div class="temperature">--°C</div>
+      <div class="description">--</div>
+    </div>
+    <div class="weather-details" id="weather-details">
+      <div class="detail">
+        <span class="icon">💧</span>
+        <span id="humidity">Humidity: --%</span>
+      </div>
+      <div class="detail">
+        <span class="icon">🌬️</span>
+        <span id="wind-speed">Wind Speed: --Km/h</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

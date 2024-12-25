@@ -1,0 +1,212 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+  background: linear-gradient(135deg, #0a0d5e, #7e1abf);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the content is centered vertically */
+  color: white;
+  flex-direction: column; /* Stack navbar and content */
+}
+
+/* Navbar Styles */
+.navbar {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 15px; /* Reduced padding for a smaller navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  font-size: 16px; /* Slightly smaller font size */
+  position: fixed; /* Keep the navbar fixed at the top */
+  top: 0;
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.navbar .navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo and text */
+  margin-left: 35px;
+  font-weight: bold;
+  font-size: 20px; /* Slightly smaller brand font */
+  color: white;
+}
+
+.logo {
+  width: 40px; /* Adjust the size */
+  height: 40px; /* Adjust the size */
+  border-radius: 50%; /* Make it round */
+  object-fit: cover; /* Fit the image inside the circle */
+  border: 2px solid white; /* Optional: Add a border */
+}
+
+.navbar .navbar-right {
+  display: flex;
+  gap: 15px; /* Add space between links */
+  list-style: none; /* Remove bullet points */
+  margin: 0; /* Remove default margin from list */
+  padding: 0; /* Remove default padding from list */
+}
+
+.navbar .navbar-right li {
+  display: inline; /* Ensure links are inline */
+}
+
+.navbar .navbar-right a {
+  font-family: monospace;
+
+  margin-right: 7px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .navbar-right a:hover {
+  background: rgb(126, 5, 65);
+  border-radius: 5px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack navbar items */
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar .navbar-right {
+    flex-direction: column;
+    width: 100%; /* Make links full width */
+    gap: 10px;
+  }
+
+  .navbar .navbar-right a {
+    width: 100%; /* Links take full width for easy tapping */
+    text-align: left;
+  }
+}
+
+/* Weather Widget Styles */
+.weather-widget {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 30px;
+  width: 400px; /* Increased width for better spacing */
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  margin-top: 80px; /* Add space below navbar */
+}
+
+/* Location Styles */
+.header {
+  margin-bottom: 20px;
+}
+
+.location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location-icon, .search-icon {
+  font-size: 20px;
+}
+
+.country {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Search Section */
+.search-section {
+  margin: 20px 0; /* Add spacing between search and other elements */
+}
+
+.search-section input {
+  font-family: monospace;
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #c71a7c;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-section button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #c425b6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-section button:hover {
+  background: #a61c98;
+}
+
+/* Weather Information */
+.weather-info {
+  margin: 20px 0;
+}
+
+.weather-icon {
+  font-size: 60px;
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* Weather Details */
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-family: monospace;
+}
+
+.detail .icon {
+  font-size: 18px;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .weather-widget {
+    width: 90%;
+  }
+
+  .temperature {
+    font-size: 36px;
+  }
+
+  .weather-icon {
+    font-size: 50px;
+  }
+
+  .detail {
+    font-size: 12px;
+  }
+}
